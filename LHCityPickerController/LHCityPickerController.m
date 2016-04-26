@@ -36,18 +36,17 @@
     //This prevent view from under nav bar
     self.edgesForExtendedLayout = UIRectEdgeNone;
 
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 40,CGRectGetWidth(self.view.frame), CGRectGetHeight([UIScreen mainScreen].bounds)-40)];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 40,CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame)-40)];
+    self.tableView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
     self.tableView.sectionIndexBackgroundColor = [UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:0.5];
     self.tableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
-//    self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self loadPlistOnlyCitys];
     self.visityHistoryArray =  [LHCityPickerController loadVisitHistory];
     self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0,CGRectGetWidth(self.view.frame), 40)];
-//    self.searchBar.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:self.searchBar];
     self.searchBar.delegate = self;
     [self.searchBar sizeToFit];
@@ -57,39 +56,14 @@
     self.searchResultTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 40,CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame)-40)];
     self.searchResultTableView.dataSource = self;
     self.searchResultTableView.delegate = self;
-//    self.searchResultTableView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.searchResultTableView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+
     [self.view addSubview:self.searchResultTableView];
     
     self.searchResultTableView.hidden = YES;
     self.tableView.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     self.tableView.backgroundColor = [UIColor colorWithHex:0xf5f5f5];
     self.searchBar.barTintColor = [UIColor colorWithHex:0xf5f5f5];
-
-//    NSDictionary * viewsDic = NSDictionaryOfVariableBindings(_searchBar,_tableView,_searchResultTableView);
-//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[_searchBar]-0-|"
-//                                                                      options:0
-//                                                                      metrics:nil
-//                                                                        views:viewsDic]];
-//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[_searchBar(40)]"
-//                                                                      options:0
-//                                                                      metrics:nil
-//                                                                        views:viewsDic]];
-//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[_tableView]-0-|"
-//                                                                      options:0
-//                                                                      metrics:nil
-//                                                                        views:viewsDic]];
-//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_searchBar]-0-[_tableView]-0-|"
-//                                                                      options:0
-//                                                                      metrics:nil
-//                                                                        views:viewsDic]];
-//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[_searchResultTableView]-0-|"
-//                                                                      options:0
-//                                                                      metrics:nil
-//                                                                        views:viewsDic]];
-//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_searchBar]-0-[_searchResultTableView]-0-|"
-//                                                                      options:0
-//                                                                      metrics:nil
-//                                                                        views:viewsDic]];
 }
 
 -(void)viewDidAppear:(BOOL)animated{

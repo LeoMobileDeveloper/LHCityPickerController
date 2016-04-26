@@ -42,10 +42,6 @@
 }
 +(instancetype)cityWithDictionary:(NSDictionary *)dic{
     LHCity * city = [[LHCity alloc] init];
-    NSNumber * num = [dic objectForKey:@"id"];
-    city.identifier = num.integerValue;
-    num = [dic objectForKey:@"pid"];
-    city.pid = num.integerValue;
     city.name = [dic objectForKey:@"name"];
     city.spell = [dic objectForKey:@"spell"];
     return city;

@@ -12,10 +12,6 @@
 
 @property (strong,nonatomic)NSArray * childrens;
 
-@property (assign,nonatomic)NSUInteger identifier;
-
-@property (assign,nonatomic)NSUInteger pid;
-
 @property (copy,nonatomic)NSString * name;
 
 @property (copy,nonatomic)NSString * spell;
