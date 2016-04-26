@@ -26,12 +26,13 @@
 }
 - (IBAction)clickShow:(id)sender {
     ExamplePickerController * picker = [[ExamplePickerController alloc] init];
+    picker.hotCitys = @[@"南京",@"上海",@"背景",@"重庆",@"广州",@"深圳"];
     UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:picker];
     picker.selectedAction = ^(NSString * city,LHCityPickerController * picker){
         NSLog(@"选中城市:%@",city);
         [picker dismissViewControllerAnimated:YES completion:nil];
     };
-    [self.navigationController presentViewController:nav animated:YES completion:nil];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 @end
