@@ -218,10 +218,10 @@
     }
     return mutableArray;
 }
--(NSArray *)hotCitysArray{
-    NSArray * names = @[@"南京",@"上海",@"常州",@"苏州",@"北京",@"沈阳"];
-   return [self lhCitysWithName:names];
-}
+//-(NSArray *)hotCitysArray{
+//    NSArray * names = @[@"南京",@"上海",@"常州",@"苏州",@"北京",@"沈阳"];
+//   return [self lhCitysWithName:names];
+//}
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (tableView == self.tableView) {
         if (indexPath.section == 0 || indexPath.section == 1) {
@@ -244,12 +244,12 @@
                 };
             }else{
                 
-                cell.citys = [self hotCitysArray];
+                cell.citys = [self lhCitysWithName:self.hotCitys];
                 cell.clickAction = ^(NSInteger index){
-                    LHCity * city =[weakSelf hotCitysArray][index];
-                    [LHCityPickerController saveVisityHistory:city.name];
+                    NSString * name = weakSelf.hotCitys[index];
+                    [LHCityPickerController saveVisityHistory:name];
                     if (weakSelf.selectedAction != nil) {
-                        weakSelf.selectedAction(city.name,self);
+                        weakSelf.selectedAction(name,self);
                     }
                 };
             }

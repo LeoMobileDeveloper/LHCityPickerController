@@ -25,4 +25,6 @@
 
 @property (strong,nonatomic)UITableView * searchResultTableView;
 
+@property (strong,nonatomic)NSArray * hotCitys;
+
 @end
