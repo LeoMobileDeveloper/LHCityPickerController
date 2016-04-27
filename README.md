@@ -3,8 +3,11 @@
 
 ###效果截图
 
-<img src="https://raw.github.com/LeoMobileDeveloper/LHCityPickerController/master/ScreenShot/s1.png" width="320" />
+<img src="https://raw.github.com/LeoMobileDeveloper/LHCityPickerController/master/ScreenShot/s1.png" width="200" />
 
+###实现类似大众点评的交互
+
+<img src="https://raw.github.com/LeoMobileDeveloper/LHCityPickerController/master/ScreenShot/dianping.gif" width="200" />
 ###支持
 
 * 所有城市（包括县级市）

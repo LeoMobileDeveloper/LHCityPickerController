@@ -20,6 +20,7 @@
 		52761C351CCE574D00140B56 /* LHCityPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52761C301CCE574D00140B56 /* LHCityPickerController.m */; };
 		52761C381CCE58BE00140B56 /* UIColor+LHCityPickerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 52761C371CCE58BE00140B56 /* UIColor+LHCityPickerHelper.m */; };
 		52761C421CCE658400140B56 /* ExamplePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52761C411CCE658400140B56 /* ExamplePickerController.m */; };
+		52830B541CD0EC9C00D728EC /* DianpingPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52830B531CD0EC9C00D728EC /* DianpingPickerController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,8 @@
 		52761C371CCE58BE00140B56 /* UIColor+LHCityPickerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+LHCityPickerHelper.m"; sourceTree = "<group>"; };
 		52761C401CCE658400140B56 /* ExamplePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamplePickerController.h; sourceTree = "<group>"; };
 		52761C411CCE658400140B56 /* ExamplePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamplePickerController.m; sourceTree = "<group>"; };
+		52830B521CD0EC9C00D728EC /* DianpingPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DianpingPickerController.h; sourceTree = "<group>"; };
+		52830B531CD0EC9C00D728EC /* DianpingPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DianpingPickerController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 				52761C141CCE570900140B56 /* AppDelegate.m */,
 				52761C401CCE658400140B56 /* ExamplePickerController.h */,
 				52761C411CCE658400140B56 /* ExamplePickerController.m */,
+				52830B521CD0EC9C00D728EC /* DianpingPickerController.h */,
+				52830B531CD0EC9C00D728EC /* DianpingPickerController.m */,
 				52761C161CCE570900140B56 /* ViewController.h */,
 				52761C171CCE570900140B56 /* ViewController.m */,
 				52761C191CCE570900140B56 /* Main.storyboard */,
@@ -196,6 +201,7 @@
 				52761C381CCE58BE00140B56 /* UIColor+LHCityPickerHelper.m in Sources */,
 				52761C181CCE570900140B56 /* ViewController.m in Sources */,
 				52761C151CCE570900140B56 /* AppDelegate.m in Sources */,
+				52830B541CD0EC9C00D728EC /* DianpingPickerController.m in Sources */,
 				52761C341CCE574D00140B56 /* LHCityItemsTableviewCell.m in Sources */,
 				52761C121CCE570900140B56 /* main.m in Sources */,
 				52761C421CCE658400140B56 /* ExamplePickerController.m in Sources */,
@@ -346,6 +352,7 @@
 				52761C261CCE570900140B56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -22,6 +22,8 @@
 
 @property (strong,nonatomic)NSArray * allCitys;
 
+@property (strong,nonatomic)UILabel * indexLabel;
+
 @end
 
 @implementation LHCityPickerController
@@ -68,7 +70,6 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    
 }
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
     self.searchResultCitys = [LHCity findCityModelWithCityName:@[searchText] cityModels:self.allCitys isFuzzy:YES];
@@ -218,10 +219,6 @@
     }
     return mutableArray;
 }
-//-(NSArray *)hotCitysArray{
-//    NSArray * names = @[@"南京",@"上海",@"常州",@"苏州",@"北京",@"沈阳"];
-//   return [self lhCitysWithName:names];
-//}
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (tableView == self.tableView) {
         if (indexPath.section == 0 || indexPath.section == 1) {
@@ -302,7 +299,6 @@
     }
     return YES;
 }
-
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (tableView == self.tableView) {

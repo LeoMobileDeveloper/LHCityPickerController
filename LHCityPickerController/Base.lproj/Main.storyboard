@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--主页-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -18,20 +18,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hlp-ao-DmU">
-                                <rect key="frame" x="281" y="285" width="38" height="30"/>
-                                <state key="normal" title="Show"/>
+                                <rect key="frame" x="274" y="285" width="53" height="30"/>
+                                <state key="normal" title="Present"/>
                                 <connections>
                                     <action selector="clickShow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3uG-PP-vdh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HHZ-In-Q0q">
+                                <rect key="frame" x="283" y="247" width="35" height="30"/>
+                                <state key="normal" title="Push"/>
+                                <connections>
+                                    <action selector="push:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nYM-F1-N2e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CuP-Ew-Eug">
+                                <rect key="frame" x="286" y="323" width="30" height="30"/>
+                                <state key="normal" title="点评"/>
+                                <connections>
+                                    <action selector="dianping:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I9r-Wq-0Oe"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Hlp-ao-DmU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AN3-QQ-uO4"/>
+                            <constraint firstItem="HHZ-In-Q0q" firstAttribute="centerX" secondItem="Hlp-ao-DmU" secondAttribute="centerX" id="EqC-bf-gM5"/>
+                            <constraint firstItem="CuP-Ew-Eug" firstAttribute="centerX" secondItem="Hlp-ao-DmU" secondAttribute="centerX" id="Pmc-62-MwO"/>
+                            <constraint firstItem="Hlp-ao-DmU" firstAttribute="top" secondItem="HHZ-In-Q0q" secondAttribute="bottom" constant="8" id="Q4N-u8-zVb"/>
+                            <constraint firstItem="CuP-Ew-Eug" firstAttribute="top" secondItem="Hlp-ao-DmU" secondAttribute="bottom" constant="8" id="aJX-IT-bCV"/>
                             <constraint firstItem="Hlp-ao-DmU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oCX-eb-Rgu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="1y4-Co-j5Y"/>
+                    <navigationItem key="navigationItem" title="主页" id="1y4-Co-j5Y"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
